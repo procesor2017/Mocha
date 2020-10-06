@@ -30,3 +30,27 @@ expect(foo).to.be.a('string')   	//type assertion
 ## Test spies, stubs and Mocks
  - Zatím se zdá že nejlepší je Sinon.js
  - Lze sním mockovat data , vytvářet Test Doubles a spies plus fakovat servery
+
+## Api
+- Využíváme knihovnu request, je dešpricated ale není se čehgo bát, nadále je nejpoužívanější
+```
+Příklad request knihovny:
+const request = require('request');
+request('http://www.google.com', function (error, response, body) {
+  console.error('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
+});
+```
+
+# Reporting
+## Reporting na podobě html reportů
+ - pass
+## Reporting do test portalů
+ - Easy peasy už vytvořeno
+## Reporting do kibany?
+ - POkud bude čas vytvořit report v podobě kibany
+
+# Vychytávky
+# Knihovna Should
+- Rozšiřuje možnosti testů
