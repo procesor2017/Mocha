@@ -45,7 +45,13 @@ request('http://www.google.com', function (error, response, body) {
 
 # Reporting
 ## Reporting na podobě html reportů
- - pass
+# Mochawesome
+ - Stačí zadat do příkaczu --reporter mochawesome
+ ```
+mocha --reporter mochawesome test/api/station.js -timeout 20000
+```
+- důležité je u api přidávat tkzv. done() pod function v it. Více zde: https://mochajs.org/#asynchronous-code
+
 ## Reporting do test portalů
  - Easy peasy už vytvořeno
 ## Reporting do kibany?
@@ -54,3 +60,6 @@ request('http://www.google.com', function (error, response, body) {
 # Vychytávky
 # Knihovna Should
 - Rozšiřuje možnosti testů
+
+# ToDO
+- Vyřešit zadávání argumentů, třeba u sčítání poslat za sebou víc dotazu na api a vyzkoušet zadávat ty to udaje automaticky a ozkoušet automatickou kontrolu výsledků
