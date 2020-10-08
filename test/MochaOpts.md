@@ -2,7 +2,7 @@
 .mmocharc.js je konfigurovatelný soubor pro nastavení a spouštění mochy. Dřívě známy jako mocha.opts
 Lze spustit příkazem 
 ```
---config ./test/.mocharc.js
+❯ mocha --config test/.mocharc.js
 ```
 
 Rozdíl oproti původnímu:

@@ -21,8 +21,8 @@ describe("Reques :: GET", function(){
             console.log(error);
             console.log(response.statusCode);
             expect(response.statusCode).to.equal(200);
-            done();
         });
+        done();
     });
     it("GET :: Expect Albertov", function(done){
         request.get(urlBase, function (error,response, body){
