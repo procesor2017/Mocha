@@ -55,11 +55,27 @@ mocha --reporter mochawesome test/api/station.js -timeout 20000
 ## Reporting do test portalů
  - Easy peasy už vytvořeno
 ## Reporting do kibany?
- - POkud bude čas vytvořit report v podobě kibany
+ - Pokud bude čas vytvořit report v podobě kibany
 
 # Vychytávky
-# Knihovna Should
+## Knihovna Should
 - Rozšiřuje možnosti testů
+## Nejlepší dokumentace
+https://devdocs.io/mocha
+## Tagování testů
+Využívá se příkaz -g / --grep (Z unixu, známý jako že vyhledává shodné znaky)
+```
+mocha --reporter mochawesome --grep '@tag' test/api/api.js -timeout 4000
+```
+
+## Watch Flags
+Nejlepší vychytávka ze které jsem uplně odpálenej.
+Spustíš test v CMD a kdykoliv v testu něco změníš tak se spustí znova. (tento mód se ukončuje klasicky ctrl-c)
+
+Stačí přidat -w do spouštěcího příkazu
+```
+mocha --reporter mochawesome -w --grep '@tag' test/api/api.js -timeout 4000
+```
 
 # ToDO
 - Vyřešit zadávání argumentů, třeba u sčítání poslat za sebou víc dotazu na api a vyzkoušet zadávat ty to udaje automaticky a ozkoušet automatickou kontrolu výsledků

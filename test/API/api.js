@@ -1,8 +1,10 @@
 var should = require("should");
 var request = require("request");
+var http = require("http");
 var chai = require("chai");
 const { doesNotMatch } = require("assert");
 const { url } = require("inspector");
+const { SSL_OP_EPHEMERAL_RSA } = require("constants");
 
 var expect = chai.expect;
 var urlBase = "http://data.pid.cz/stops/json/stops.json";
@@ -10,6 +12,7 @@ var urlBase = "http://data.pid.cz/stops/json/stops.json";
 var urlCalculator = "http://api.mathjs.org/v4/?expr=1%2B1"
 var urlPostCalculator = "http://api.mathjs.org/v4/"
 
+var testData = [1,1,'2',2,2,'4'];
 
 
 describe("Reques :: GET", function(){
@@ -81,3 +84,29 @@ describe("Calculator :: GET/POST", function(){
     });
 });
 
+describe("Claculator :: Loop with http", function(){
+    it("Must use http, bcs its async @tag", function(done){
+        var i = 0;
+        var _body;
+        // začátek cyklu
+        while (i < testData.length){
+            var numberOne = testData[i];
+            var numberTwo = testData[i + 1];
+            var numberThree = testData[i + 2];
+            var newUrl = urlPostCalculator + "?expr=" + numberOne + "%2B" + numberTwo
+            http.get(url, res => {
+                res.setEncoding("utf8");
+                let body = "";
+                res.on("data", data => {  // response.on('data', function(data){)
+                  body += data;
+                });
+                res.on("end", () => {   // ničím asychronitu tím to příkazem který se má provést vždy na konci
+                  body = JSON.parse(body);
+                  expect(body).to.equal(numberThree);
+                });
+            });
+            i += 3;
+        };
+        done();
+    });
+});
