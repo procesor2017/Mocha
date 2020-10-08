@@ -40,5 +40,4 @@ describe('Playwright :: Open browser', async() => {
         expect(searchResults).to.equal('Search Results');
         expect(title).to.equal('Posts containing "mocha" - Stack Overflow')
     })
-
 });

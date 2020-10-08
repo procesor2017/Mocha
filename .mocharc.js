@@ -1,8 +1,8 @@
 module.exports = {  
     exit: true,
     bail: true,
-    recursive: true,
+    recursive: false,
     reporter: 'mochawesome',
-    timeout: 4000,
-    file: ['./test/api/api.js'] // delete if u wanna start others test :-)
+    timeout: 10000,
+    file: ['./test/api/api.js', './test/web/web.js'] // delete if u wanna start others test :-)
   }

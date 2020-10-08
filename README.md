@@ -77,5 +77,8 @@ Stačí přidat -w do spouštěcího příkazu
 mocha --reporter mochawesome -w --grep '@tag' test/api/api.js -timeout 4000
 ```
 
+## Mobile testing 
+- velmi nápomocný (článek)[https://experitest.com/appium-blog/follow-this-guide-to-set-up-appium-automation-using-javascript/]
+
 # ToDO
 - Vyřešit zadávání argumentů, třeba u sčítání poslat za sebou víc dotazu na api a vyzkoušet zadávat ty to udaje automaticky a ozkoušet automatickou kontrolu výsledků
