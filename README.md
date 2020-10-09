@@ -1,32 +1,40 @@
-# Co je to mocha
-Js testovací framework založený na BDD (Behavior test driven)
-Mocha byla založena 2011´, není to klasický testovací framework, ani se nesnaží být.
-Mocha zahrnuje jen základy a zbytek si pak rozšíříš dle toho co potřebuješ.
+# Mocha - How to write some basic tests
+
+## [Documentation](https://github.com/procesor2017/Mocha/tree/master/Documentations) | [Tesena](https://www.tesena.com/)
+
+## Basic Info
+Repository shows how to use Mocha with node.js library for testing API, mobile aplication and web aplication. 
+you can find full documentation under folder Documentations, if you just wanna try these test, follow Install category.
+
+## Install
+### For Api and Web testing:
+
+You can install everything with some orders:
+```
+npm install --save-dev mocha
+npm install --save-dev mochawesome
+npm i -D playwright
+npm install chai
 
 ```
-Bdd example:
-describe("My First Test Suite", function() {
-  it("introduces a test suite", function() {
-    expect(true).toBe(true);
-  });
-});
+
+or you can just start:
+```
+npm test
 ```
 
-# Co je třeba dodávat do mochy
-## Assertion Library
-- Nejpopulárnější je knihovna Chai.
-- Nabízí tkzv. "fluent" syntax, kdy porovnávací operátory mohéou být změněny dohromady
-- Umí tři základní porovnání:
- - Should
- - Expect
- - Assert
-```
-Příklad Chai assertion:
-expect(foo).to.equal('foo')	     	//equality
-expect(foo).to.not.equal('foo')	    //inequality
-expect(foo).to.be.a('string')   	//type assertion
-```
+### For mobile testing
+You need install appium and AVD. 
+More information you can find [here](http://appium.io/docs/en/about-appium/getting-started/).
 
+## Resource
+ - [Mocha documentation](https://devdocs.io/mocha)
+ - [Full command for starting mocha](https://mochajs.org/#command-line-usage)
+
+
+
+
+## What you can find here:
 ## Test spies, stubs and Mocks
  - Zatím se zdá že nejlepší je Sinon.js
  - Lze sním mockovat data , vytvářet Test Doubles a spies plus fakovat servery
@@ -44,24 +52,11 @@ request('http://www.google.com', function (error, response, body) {
 ```
 
 # Reporting
-## Reporting na podobě html reportů
-# Mochawesome
- - Stačí zadat do příkaczu --reporter mochawesome
- ```
-mocha --reporter mochawesome test/api/station.js -timeout 20000
-```
-- důležité je u api přidávat tkzv. done() pod function v it. Více zde: https://mochajs.org/#asynchronous-code
-
-## Reporting do test portalů
- - Easy peasy už vytvořeno
-## Reporting do kibany?
- - Pokud bude čas vytvořit report v podobě kibany
-
 # Vychytávky
 ## Knihovna Should
 - Rozšiřuje možnosti testů
 ## Nejlepší dokumentace
-https://devdocs.io/mocha
+
 ## Tagování testů
 Využívá se příkaz -g / --grep (Z unixu, známý jako že vyhledává shodné znaky)
 ```
