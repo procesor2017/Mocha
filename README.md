@@ -27,6 +27,16 @@ npm test
 You need install appium and AVD. 
 More information you can find [here](http://appium.io/docs/en/about-appium/getting-started/).
 
+## Documentation
+About library:
+- [Assertion Library](https://github.com/procesor2017/Mocha/blob/master/Documentations/Library.md#assertion-library)
+- [Request Library](https://github.com/procesor2017/Mocha/blob/master/Documentations/Library.md#request-library)
+- [Reporting](https://github.com/procesor2017/Mocha/blob/master/Documentations/Library.md#reporting)
+About mocharc.js setup:
+- [Basic](https://github.com/procesor2017/Mocha/blob/master/Documentations/Mocha%20set%20up.md#basic)
+- [Most-used-Commands](https://github.com/procesor2017/Mocha/blob/master/Documentations/Mocha%20set%20up.md#most-used-commands)
+- [Different between mocha.opts and .mocharc.js](https://github.com/procesor2017/Mocha/blob/master/Documentations/Mocha%20set%20up.md#different-between-mochaopts-and-mocharcjs)
+
 ## Resource
  - [Mocha documentation](https://devdocs.io/mocha)
  - [Full command for starting mocha](https://mochajs.org/#command-line-usage)

@@ -1,6 +1,20 @@
 # .Mocharc.js
+## Bookmarks
+- [Basic](#assertion-library)
+- [Most-used-Commands](#request-library)
+- [Different between mocha.opts and .mocharc.js](#different-between-mochaopts-and-mocharcjs)
+
 ## Basic
-Config file for set up your mocha. It replace mocha.opts. 
+Mocha supports configuration files, typical of modern command-line tools, in several formats as js, json or yml. It replace mocha.opts. 
+
+If no custom path was given, and if there are multiple configuration files in the same directory, Mocha will search for — and use — only one. The priority is:
+```
+.mocharc.js
+.mocharc.yaml
+.mocharc.yml
+.mocharc.jsonc
+.mocharc.json
+```
 
 Example
 ```
