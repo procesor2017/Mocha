@@ -24,6 +24,7 @@ title.should.equal(actual, 'Posts containing "mocha" - Stack Overflow'); // Shou
 ## Request Library
 I use two libraries. Request and http/https. First is most famous but have some trouble with async. Second library is implemented into js but doesnt have many options.
 | Request library | describe |
+|:----------:|:-------------:|
 |[Request](https://www.npmjs.com/package/request)| Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default. |
 |[http](https://nodejs.org/api/http.html)| Library from js.  |
 |[Needle](https://www.npmjs.com/package/needle)| Minimalistic BDD assertion toolkit based on should.js |

@@ -33,6 +33,7 @@ module.exports = {
 Full command you can find [HERE](https://mochajs.org/#command-line-usage)
 
 | Command | describe |
+|:----------:|:-------------:|
 | exit | Force Mocha to quit after tests complete |
 | bail | Abort ("bail") after first test failure |
 | check-leaks | Check for global variable leaks  |
