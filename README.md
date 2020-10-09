@@ -40,3 +40,4 @@ About mocharc.js setup:
 ## Resource
  - [Mocha documentation](https://devdocs.io/mocha)
  - [Full command for starting mocha](https://mochajs.org/#command-line-usage)
+ - [ Configuring Mocha (Node.js)](https://mochajs.org/#configuring-mocha-nodejs)
